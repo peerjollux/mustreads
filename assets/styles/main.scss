@@ -1,0 +1,17 @@
+// Config
+@import "_variables/*";
+@import "_functions/*";
+@import "_mixins/*";
+
+// Bower Components
+@import "../../bower_components/normalize-scss/_normalize.scss";
+
+// General DOM selector styles
+@import "base/*";
+
+// Atomic Design
+@import "atoms/**/*";
+@import "molecules/**/*";
+@import "organisms/**/*";
+@import "templates/**/*";
+@import "pages/**/*";

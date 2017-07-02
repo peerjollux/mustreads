@@ -1,0 +1,17 @@
+{
+  "name": "mustreads",
+  "description": "Collection of designers mustreads.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Jaer Pollux <jaerpollux@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
