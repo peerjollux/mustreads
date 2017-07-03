@@ -1,0 +1,20 @@
+.navbar {
+  @extend %clearfix;
+  padding-top: 50px;
+  padding-bottom: 25px;
+
+  font-weight: 600;
+}
+
+.nav__list {
+  width: 100%;
+  @include horizontal-list();
+}
+
+.nav--left {
+  float: left;
+}
+
+.nav--right {
+  float: right;
+}

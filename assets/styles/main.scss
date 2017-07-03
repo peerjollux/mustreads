@@ -1,10 +1,11 @@
 // Config
-@import "_variables/*";
+@import "_variables/variables";
 @import "_functions/*";
 @import "_mixins/*";
+@import "_utilities/*";
 
-// Bower Components
-@import "../../bower_components/normalize-scss/_normalize.scss";
+//Bootstrap
+@import "vendor/**/*"
 
 // General DOM selector styles
 @import "base/*";

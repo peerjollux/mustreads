@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Breakpoints
+   ========================================================================== */
+
+$break-xxs: 380px;
+$break-xs: 520px;
+$break-sm: 720px;
+$break-md: 980px;
+$break-lg: 1280px;
+
+$break-menu: 900px;
+
+
+/* ==========================================================================
+   Responsive gutters
+   ========================================================================== */
+$gutter-xs: 3rem;
+$gutter-sm: $gutter-xs;
+$gutter-md: 30px;
+$gutter-lg: $gutter-md;
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+// So media queries don't overlap when required, provide a minimum
+$break-xxs-min: ($break-xxs + 1); // Mobile (small)
+$break-xs-min: ($break-xs + 1); // Mobile (medium, also used by bootstrap)
+$break-sm-min: ($break-sm + 1); // Tablet
+$break-md-min: ($break-md + 1); // Desktop
+$break-lg-min: ($break-lg + 1); // Desktop large
+
+$break-menu-min: ($break-menu + 1); // Menu
+
+// == Media queries
+// usage example: $media $q-xs-max { ... }
+
+$q-xxs-min: "screen and (min-width:" #{$break-xxs-min}")";
+$q-xxs-max: "screen and (max-width:" #{$break-xxs}")";
+$q-xxs:     $q-xxs-max;
+
+$q-xs-min: "screen and (min-width:" #{$break-xs-min} ")";
+$q-xs-max:  "screen and (max-width:" #{$break-xs} ")";
+$q-xs:      "screen and (min-width:" #{$break-xxs-min} ") and (max-width:"#{$break-xs} ")";
+
+$q-sm-min:  "screen and (min-width:" #{$break-sm-min} ")";
+$q-sm-max:  "screen and (max-width:" #{$break-sm} ")";
+$q-sm:      "screen and (min-width:" #{$break-xs-min} ") and (max-width:"#{$break-sm} ")";
+
+$q-sm-md:   "screen and (min-width:" #{$break-sm-min} ") and (max-width:"#{$break-md} ")";
+
+$q-md-min:  "screen and (min-width:" #{$break-md-min} ")";
+$q-md-max:  "screen and (max-width:" #{$break-md} ")";
+$q-md:      "screen and (min-width:" #{$break-sm-min} ") and (max-width:"#{$break-md} ")";
+
+$q-lg-min:  "screen and (min-width:" #{$break-lg-min} ")";
+$q-lg-max:  "screen and (max-width:" #{$break-lg} ")";
+$q-lg:      "screen and (min-width:" #{$break-md-min} ") and (max-width:"#{$break-lg} ")";
+
+$q-xl:      "screen and (min-width:" #{$break-lg-min} ")";
+
+$q-ie-10:   "screen and (-ms-high-contrast: active), (-ms-high-contrast: none)";
+
+$q-menu-min:  "screen and (min-width:" #{$break-menu-min} ")";
+$q-menu-max:  "screen and (max-width:" #{$break-menu} ")";

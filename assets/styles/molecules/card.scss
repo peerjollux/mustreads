@@ -1,0 +1,24 @@
+.card {
+  @extend %clearfix;
+}
+
+.card__image-wrapper {
+  @include aspect-ratio(4, 3);
+  background-color: #B11C30;
+  text-align: center;
+}
+
+.card__image {
+  max-height: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.card__title {
+
+}
+
+.card__author {
+  color: $color-text-grey;
+}

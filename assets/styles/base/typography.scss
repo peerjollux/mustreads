@@ -1,3 +1,54 @@
-body {
-  font-size: 18px;
+html {
+  @extend %fontSizeBase;
+}
+h1 {
+  @extend %fontSizeH1;
+}
+
+/* ==========================================================================
+   Quick references to font sizes
+   ========================================================================== */
+
+%fontSizeH1 {   @extend %fontSizeXxl; }
+%fontSizeH2 {   @extend %fontSizeXl; }
+%fontSizeH3 {   @extend %fontSizeLg; }
+%fontSizeH4 {   @extend %fontSizeSm; }
+%fontSizeH5 {   @extend %fontSizeXs; }
+%fontSizeH6 {   @extend %fontSizeXxs; }
+
+
+/* ==========================================================================
+   Responsive type scales
+   ========================================================================== */
+
+%fontSizeBase { font-size: $font-size-small-base; }
+%fontSizeXxl { font-size: $font-size-small-xxl; }
+%fontSizeXl { font-size: $font-size-small-xl; }
+%fontSizeLg { font-size: $font-size-small-lg; }
+%fontSizeMd { font-size: $font-size-small-md; }
+%fontSizeSm { font-size: $font-size-small-sm; }
+%fontSizeXs { font-size: $font-size-small-xs; }
+%fontSizeXxs { font-size: $font-size-small-xxs; }
+
+
+@include media-breakpoint-up(md) {
+  %fontSizeBase { font-size: $font-size-medium-base; }
+  %fontSizeXxl { font-size: $font-size-medium-xxl; }
+  %fontSizeXl { font-size: $font-size-medium-xl; }
+  %fontSizeLg { font-size: $font-size-medium-lg; }
+  %fontSizeMd { font-size: $font-size-medium-md; }
+  %fontSizeSm { font-size: $font-size-medium-sm; }
+  %fontSizeXs { font-size: $font-size-medium-xs; }
+  %fontSizeXxs { font-size: $font-size-medium-xxs; }
+}
+
+@include media-breakpoint-up(lg) {
+  %fontSizeBase { font-size: $font-size-large-base; }
+  %fontSizeXxl { font-size: $font-size-large-xxl; }
+  %fontSizeXl { font-size: $font-size-large-xl; }
+  %fontSizeLg { font-size: $font-size-large-lg; }
+  %fontSizeMd { font-size: $font-size-large-md; }
+  %fontSizeSm { font-size: $font-size-large-sm; }
+  %fontSizeXs { font-size: $font-size-large-xs; }
+  %fontSizeXxs { font-size: $font-size-large-xxs; }
 }
