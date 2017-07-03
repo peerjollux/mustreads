@@ -16,7 +16,7 @@
 }
 
 .card__title {
-
+  @extend %fontSizeBody;
 }
 
 .card__author {

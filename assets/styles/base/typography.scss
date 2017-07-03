@@ -3,6 +3,25 @@ html {
 }
 h1 {
   @extend %fontSizeH1;
+  font-weight: 600;
+}
+
+h2 {
+  @extend %fontSizeH2;
+  font-weight: 600;
+}
+
+h3 {
+  @extend %fontSizeH3;
+  font-weight: 600;
+}
+
+p {
+  @extend %fontSizeBody;
+}
+
+p.small {
+  @extend %fontSizeH5;
 }
 
 /* ==========================================================================
@@ -12,7 +31,7 @@ h1 {
 %fontSizeH1 {   @extend %fontSizeXxl; }
 %fontSizeH2 {   @extend %fontSizeXl; }
 %fontSizeH3 {   @extend %fontSizeLg; }
-%fontSizeH4 {   @extend %fontSizeSm; }
+%fontSizeBody {   @extend %fontSizeSm; }
 %fontSizeH5 {   @extend %fontSizeXs; }
 %fontSizeH6 {   @extend %fontSizeXxs; }
 

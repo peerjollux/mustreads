@@ -13,3 +13,5 @@ Thumbs.db
 
 node_modules/
 bower_components/
+vendor/
+composer.lock
