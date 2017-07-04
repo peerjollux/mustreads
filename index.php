@@ -13,8 +13,10 @@
  * @since   MustReads 0.1
  */
 $context = Timber::get_context();
-$context['posts'] = Timber::get_posts();
-$context['foo'] = 'bar';
+$args = array(
+	'post_type' => 'book',// Get all posts
+);
+$context['books'] = Timber::get_posts($args);
 $templates = array( 'views/templates/base.twig' );
 
 Timber::render( $templates, $context );

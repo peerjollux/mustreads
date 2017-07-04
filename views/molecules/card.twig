@@ -1,0 +1,13 @@
+<div class="card card--book">
+  <div class="card__image-wrapper" style="background-color: {{ book.get_field('book_background_color') }}">
+    <img src="{{ TimberImage(book.book_cover).src|resize(400) }}" alt="{{ TimberImage(book.book_cover).alt }}" class="card__image">
+  </div>
+  <div class="card__content">
+    <h3 class="card__title">
+      {{ book.get_field('book_title') }}
+    </h3>
+    <p class="card__author">
+      {{ book.get_field('book_author') }}
+    </p>
+  </div>
+</div>

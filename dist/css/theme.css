@@ -3663,7 +3663,7 @@ h3 {
 p, .card__title {
   font-size: 1rem; }
 
-p.small {
+p.small, .card__author {
   font-size: 0.875rem; }
 
 @media (min-width: 720px) {
@@ -3677,7 +3677,7 @@ p.small {
     font-size: 1.25rem; }
   p, .card__title {
     font-size: 1.125rem; }
-  p.small {
+  p.small, .card__author {
     font-size: 1rem; } }
 
 @media (min-width: 980px) {
@@ -3691,7 +3691,7 @@ p.small {
     font-size: 1.44rem; }
   p, .card__title {
     font-size: 1rem; }
-  p.small {
+  p.small, .card__author {
     font-size: 0.833rem; } }
 
 .card__image-wrapper {
@@ -3718,6 +3718,12 @@ p.small {
   left: 0;
   bottom: 0;
   right: 0; }
+
+.card__content {
+  padding-top: 10px; }
+
+.card__title {
+  margin-bottom: 0; }
 
 .card__author {
   color: #ABABAB; }

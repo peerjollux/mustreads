@@ -21,7 +21,7 @@ p {
 }
 
 p.small {
-  @extend %fontSizeH5;
+  @extend %fontSizeSmall;
 }
 
 /* ==========================================================================
@@ -32,7 +32,7 @@ p.small {
 %fontSizeH2 {   @extend %fontSizeXl; }
 %fontSizeH3 {   @extend %fontSizeLg; }
 %fontSizeBody {   @extend %fontSizeSm; }
-%fontSizeH5 {   @extend %fontSizeXs; }
+%fontSizeSmall {   @extend %fontSizeXs; }
 %fontSizeH6 {   @extend %fontSizeXxs; }
 
 

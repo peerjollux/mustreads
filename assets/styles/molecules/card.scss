@@ -15,10 +15,16 @@
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
+.card__content {
+  padding-top: 10px;
+}
+
 .card__title {
   @extend %fontSizeBody;
+  margin-bottom: 0;
 }
 
 .card__author {
+  @extend %fontSizeSmall;
   color: $color-text-grey;
 }
