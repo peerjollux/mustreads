@@ -15,6 +15,7 @@ class MustReadsTimber extends TimberSite {
 	function add_to_context( $context ) {
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
+		$context['categories'] = Timber::get_terms( array('taxonomy' => 'category', 'hide_empty' => false));
 		return $context;
 	}
 

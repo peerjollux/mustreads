@@ -2,8 +2,20 @@
   @extend %clearfix;
   padding-top: 50px;
   padding-bottom: 25px;
-
   font-weight: 600;
+  box-shadow: 0 1px 0px 0 rgba(0, 0, 0, .05);
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background: #FFF;
+  top: 0;
+
+  transition: padding 600ms 0s ;
+
+  &.shrink {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .nav__list {
@@ -17,4 +29,13 @@
 
 .nav--right {
   float: right;
+}
+
+.navbar__logo {
+  position: absolute;
+  max-width: 162px;
+  height: auto;
+  left: 50%;
+  margin-left: -81px;
+  -webkit-backface-visibility: hidden; //Fixes the shaky logo
 }

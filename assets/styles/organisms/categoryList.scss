@@ -1,0 +1,25 @@
+.categoryList-section {
+  background: #EEEEEE;
+  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.categoryList__link {
+   padding-top: 15px;
+   padding-bottom: 15px;
+   border-top: 1px solid #CDCDCD;
+   display: block;
+   width: 100%;
+   color: #2A2928;
+   font-weight:  600;
+
+   &:hover {
+     color: #0674FF;
+     text-decoration: none;
+   }
+}
+
+.single .categoryList-section {
+  margin-top: 0;
+}

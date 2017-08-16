@@ -12,13 +12,17 @@
  * @subpackage  MustReads
  * @since   MustReads 0.1
  */
+
+$category = single_cat_title( '', false );
+
+
 $context = Timber::get_context();
 $args = array(
-	'post_type' => 'book',// Get all posts
+	'post_type' => 'book',
+  'category_name' => $category
 );
+$context['category'] = $category;
 $context['books'] = Timber::get_posts($args);
 
 
-$templates = array( 'views/pages/home.twig' );
-
-Timber::render( $templates, $context );
+Timber::render( array( 'templates/category.twig' ), $context );

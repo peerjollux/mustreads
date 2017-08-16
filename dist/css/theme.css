@@ -1358,6 +1358,128 @@ output {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0; }
+  .modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    transform: translate(0, -25%); }
+  .modal.show .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000; }
+  .modal-backdrop.fade {
+    opacity: 0; }
+  .modal-backdrop.show {
+    opacity: 0.5; }
+
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef; }
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5; }
+
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px; }
+
+.modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 15px;
+  border-top: 1px solid #eceeef; }
+  .modal-footer > :not(:first-child) {
+    margin-left: .25rem; }
+  .modal-footer > :not(:last-child) {
+    margin-right: .25rem; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+@media (min-width: 520px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 30px auto; }
+  .modal-sm {
+    max-width: 300px; } }
+
+@media (min-width: 980px) {
+  .modal-lg {
+    max-width: 800px; } }
+
 .align-baseline {
   vertical-align: baseline !important; }
 
@@ -3629,9 +3751,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
+body {
+  padding-top: 103px; }
+
 .container-fluid {
   max-width: 1400px;
   margin: 0 auto; }
+
+html {
+  font-family: "acumin-pro"; }
 
 h1 {
   font-weight: 600; }
@@ -3654,7 +3782,7 @@ html {
 h1 {
   font-size: 1.625rem; }
 
-h2 {
+h2, .details__author {
   font-size: 1.375rem; }
 
 h3 {
@@ -3671,7 +3799,7 @@ p.small, .card__author {
     font-size: 16px; }
   h1 {
     font-size: 2rem; }
-  h2 {
+  h2, .details__author {
     font-size: 1.625rem; }
   h3 {
     font-size: 1.25rem; }
@@ -3685,7 +3813,7 @@ p.small, .card__author {
     font-size: 19px; }
   h1 {
     font-size: 2.074rem; }
-  h2 {
+  h2, .details__author {
     font-size: 1.728rem; }
   h3 {
     font-size: 1.44rem; }
@@ -3693,6 +3821,32 @@ p.small, .card__author {
     font-size: 1rem; }
   p.small, .card__author {
     font-size: 0.833rem; } }
+
+.btn {
+  background-color: #0674FF;
+  color: #FFF;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 15px 20px; }
+  .btn:hover, .btn:active, .btn:focus {
+    color: #fff;
+    background: #0666E0; }
+
+a {
+  color: #060505;
+  outline: none; }
+  a:hover, a:active, a:focus {
+    color: #0674FF;
+    text-decoration: none; }
+
+.tag {
+  font-size: .786rem;
+  border: 1px solid #ABABAB;
+  color: #ABABAB;
+  padding: 5px 15px;
+  border-radius: 50px; }
+  .tag:hover, .tag:focus, .tag:active {
+    border-color: #0674FF; }
 
 .card__image-wrapper {
   position: relative;
@@ -3728,15 +3882,88 @@ p.small, .card__author {
 .card__author {
   color: #ABABAB; }
 
+.modal.fade .modal-dialog {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none; }
+
+.modal-content {
+  border-radius: 4px;
+  border: none;
+  max-width: 500px; }
+
+.modal-body {
+  padding: 50px;
+  text-align: center; }
+
+.modal-backdrop {
+  background-color: #F2C2B7; }
+  .modal-backdrop.show {
+    opacity: .9; }
+
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  /* This makes sure that we can still click outside of the modal to close it */ }
+
+.vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none; }
+
+.modal-content {
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width: inherit;
+  height: inherit;
+  /* To center horizontally */
+  margin: 0 auto;
+  pointer-events: all; }
+
+.categoryList-section {
+  background: #EEEEEE;
+  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.categoryList__link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #CDCDCD;
+  display: block;
+  width: 100%;
+  color: #2A2928;
+  font-weight: 600; }
+  .categoryList__link:hover {
+    color: #0674FF;
+    text-decoration: none; }
+
+.single .categoryList-section {
+  margin-top: 0; }
+
 .hero {
   background: #F2C2B7;
-  height: 680px;
+  height: 520px;
   margin-bottom: 80px; }
 
 .navbar {
   padding-top: 50px;
   padding-bottom: 25px;
-  font-weight: 600; }
+  font-weight: 600;
+  -webkit-box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background: #FFF;
+  top: 0;
+  -webkit-transition: padding 600ms 0s;
+  transition: padding 600ms 0s; }
+  .navbar.shrink {
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
 .nav__list {
   width: 100%;
@@ -3753,5 +3980,98 @@ p.small, .card__author {
 
 .nav--right {
   float: right; }
+
+.navbar__logo {
+  position: absolute;
+  max-width: 162px;
+  height: auto;
+  left: 50%;
+  margin-left: -81px;
+  -webkit-backface-visibility: hidden; }
+
+.pageHeader {
+  height: 220px;
+  background-color: #F2C2B7;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.category__title-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center; }
+
+.category__title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600; }
+
+.category__back-link {
+  text-align: center;
+  color: #ABABAB;
+  font-weight: 600; }
+
+.cover-section, .details-section {
+  height: calc(100vh - 103px);
+  width: 50%;
+  float: left; }
+  @media (max-width: 719px) {
+    .cover-section, .details-section {
+      width: 100%; } }
+
+.cover-section {
+  position: relative; }
+  @media (max-width: 719px) {
+    .cover-section {
+      height: 75vh;
+      padding: 40px; } }
+
+.cover-section__image {
+  max-height: 80%;
+  max-width: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+@media (max-width: 719px) {
+  .details-section {
+    height: auto;
+    padding: 60px 40px 80px; } }
+
+.details-section__wrapper {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-width: 500px;
+  margin-left: 10%;
+  padding-bottom: 12px; }
+  @media (max-width: 719px) {
+    .details-section__wrapper {
+      top: 0;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      margin-left: 0; } }
+
+.details__title {
+  font-size: 3rem;
+  margin-bottom: -10px; }
+
+.details__author {
+  color: #ABABAB; }
+
+.details__categories {
+  margin-top: 30px; }
+
+.details__description {
+  margin-top: 30px;
+  margin-bottom: 60px; }
+
+.details__link {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=theme.css.map */

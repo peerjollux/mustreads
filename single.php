@@ -13,12 +13,10 @@
  * @since   MustReads 0.1
  */
 $context = Timber::get_context();
-$args = array(
-	'post_type' => 'book',// Get all posts
-);
-$context['books'] = Timber::get_posts($args);
-
-
-$templates = array( 'views/pages/home.twig' );
-
-Timber::render( $templates, $context );
+$post = Timber::query_post();
+$context['book'] = $post;
+if ( post_password_required( $post->ID ) ) {
+	Timber::render( 'single-password.twig', $context );
+} else {
+	Timber::render( array( 'templates/single-' . $post->ID . '.twig', 'templates/single-' . $post->post_type . '.twig', 'templates/single.twig' ), $context );
+}

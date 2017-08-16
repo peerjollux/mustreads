@@ -1,0 +1,11 @@
+a {
+  color: $color-text-dark;
+  outline: none;
+  
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text-blue;
+    text-decoration: none;
+  }
+}

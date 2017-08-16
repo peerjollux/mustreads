@@ -1,0 +1,11 @@
+.tag {
+  font-size: .786rem;
+  border: 1px solid $color-text-grey;
+  color: $color-text-grey;
+  padding: 5px 15px;
+  border-radius: 50px;
+
+  &:hover, &:focus, &:active {
+    border-color: $color-text-blue;
+  }
+}

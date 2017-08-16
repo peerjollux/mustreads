@@ -1,0 +1,51 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+  <section class="pageHeader" style="background-image:url('{{ theme.link }}/dist/img/pageHeaders/header-{{category|sanitize}}.png')">
+
+  </section>
+
+
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="category__title-section">
+          <a href="#categories" class="category__back-link">Categories</a>
+          <h1 class="category__title">
+            {{ category }}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+  <section class="categoryList-section" id="categories">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Categories</h2>
+        </div>
+      </div>
+      <div class="row">
+        {% for category in categories %}
+          {% if category.name != "Uncategorized" %}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <a href="{{ category.link }}" class="categoryList__link">
+                {{ category.name }}
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
