@@ -11,4 +11,20 @@ $(window).scroll(function() {
   }
 });
 
-console.log('adss');
+$(document).ready(function() {
+
+  var staggerCounter = 0;
+
+  $('.card').addClass("hidden").viewportChecker({
+      classToAdd: '',
+      offset: 100,
+      callbackFunction: function(elem) {
+        staggerCounter++
+        setTimeout(function(){
+          staggerCounter--;
+          $(elem).addClass("animated fadeInUp");
+        }, staggerCounter*150)
+
+      }
+   });
+});
