@@ -9,15 +9,21 @@
   width: 100%;
   background: #FFF;
   top: 0;
-
+  min-height: 100px;
   transition: padding 600ms 0s ;
 
-  &.shrink {
+  &.navbar--shrink {
     padding-top: 20px;
     padding-bottom: 20px;
+    min-height: 65px;
   }
 }
 
+body.admin-bar {
+  .navbar {
+    top: 32px;
+  }
+}
 .nav__list {
   width: 100%;
   @include horizontal-list();

@@ -7,6 +7,34 @@
 
   &:hover, &:active, &:focus {
     color: #fff;
-    background: #0666E0;
+    background: darken($color-text-blue, 5%);
+  }
+}
+
+.btn--white {
+  background-color: #FFF;
+  color: $color-text-dark;
+
+  &:hover, &:active, &:focus {
+    color: $color-text-dark;
+    background-color: #F7F4F4;
+  }
+}
+
+
+.btn--small {
+  font-size: .9rem;
+}
+
+
+.btn--bordered {
+  background: none;
+  
+  color: $color-text-dark;
+
+  &:hover, &:active, &:focus {
+    background: none;
+    color: $color-text-blue;
+    border-color: $color-text-blue;
   }
 }

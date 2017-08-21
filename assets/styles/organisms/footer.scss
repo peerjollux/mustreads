@@ -1,0 +1,7 @@
+.footer {
+  background: #EEEEEE;
+  text-align: center;
+  @extend %fontSizeSmall;
+  font-weight: 600;
+  padding: 30px 0;
+}

@@ -1,0 +1,18 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<div class="hero">
+  <div class="hero__inner">
+    <h1>{{ page.get_field('hero_title') }}</h1>
+  </div>
+</div>
+
+  <section class="container-fluid page__content">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+        {{ page.content }}
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -2,17 +2,17 @@
   <div class="container-fluid">
     <nav class="nav nav--left">
       <ul class="nav__list">
-        <li><a href="/">popular</a></li>
+        <li><a href="{{site.url}}">popular</a></li>
         <li><a href="#categories">categories</a></li>
       </ul>
     </nav>
-    <img src="{{ theme.link }}/dist/img/logo.svg" alt="MustReads" class="navbar__logo" width="162" height="24">
+    <a href="{{site.url}}">
+      <img src="{{ theme.link }}/dist/img/logo.svg" alt="MustReads" class="navbar__logo" width="162" height="24">
+    </a>
     <nav class="nav nav--right">
       <ul class="nav__list">
         <li>
-          <a href="#about" data-toggle="modal" data-target="#aboutModal">
-            about
-          </a>
+          <li><a href="{{site.url}}/about">about</a></li>
         </li>
         <li>submit a book</li>
       </ul>

@@ -1,20 +1,26 @@
 html {
   @extend %fontSizeBase;
-  font-family: "acumin-pro";
+  color: $color-text-dark;
 }
+
+body {
+  color: $color-text-dark;
+}
+
 h1 {
   @extend %fontSizeH1;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h2 {
   @extend %fontSizeH2;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 h3 {
   @extend %fontSizeH3;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 p {
@@ -62,7 +68,7 @@ p.small {
   %fontSizeXxs { font-size: $font-size-medium-xxs; }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   %fontSizeBase { font-size: $font-size-large-base; }
   %fontSizeXxl { font-size: $font-size-large-xxl; }
   %fontSizeXl { font-size: $font-size-large-xl; }

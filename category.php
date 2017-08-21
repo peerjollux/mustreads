@@ -13,16 +13,11 @@
  * @since   MustReads 0.1
  */
 
-$category = single_cat_title( '', false );
 
 
-$context = Timber::get_context();
-$args = array(
-	'post_type' => 'book',
-  'category_name' => $category
-);
-$context['category'] = $category;
-$context['books'] = Timber::get_posts($args);
+ $context = Timber::get_context();
+ $context['category'] = single_cat_title( '', false );
+ $context['books'] = Timber::get_posts();
+ $context['pagination'] = Timber::get_pagination();
 
-
-Timber::render( array( 'templates/category.twig' ), $context );
+ Timber::render('templates/category.twig', $context);

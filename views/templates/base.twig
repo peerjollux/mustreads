@@ -8,6 +8,7 @@
 
     <body class="{{body_class}}" data-template="base.twig" {{ body_atributes }}>
         {% include 'partials/google-tag-manager.twig' %}
+        {% include 'partials/fbLikeButton.twig' %}
 
         {% include 'organisms/navigation.twig' %}
 
@@ -15,7 +16,9 @@
 
         {% endblock %}
 
-        {% include 'organisms/aboutModal.twig' %}
+        {% include 'organisms/categoryList.twig' %}
+
+        {% include 'organisms/footer.twig' %}
 
         {% block footer %}
             {% block footer_scripts %}

@@ -20,7 +20,6 @@ class MustReadsTimber extends TimberSite {
 	}
 
 	function add_to_twig( $twig ) {
-		/* this is where you can add your own functions to twig */
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		return $twig;
 	}

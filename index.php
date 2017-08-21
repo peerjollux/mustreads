@@ -12,12 +12,15 @@
  * @subpackage  MustReads
  * @since   MustReads 0.1
  */
+
+
+
 $context = Timber::get_context();
 $args = array(
 	'post_type' => 'book',// Get all posts
 );
-$context['books'] = Timber::get_posts($args);
-
+$context['books'] = Timber::get_posts();
+$context['pagination'] = Timber::get_pagination();
 
 $templates = array( 'views/pages/home.twig' );
 

@@ -2,16 +2,18 @@
 
 {% block content %}
   <div class="hero">
-
+    <div class="hero__inner">
+      <h1>Because life is too short for reading crappy books</h1>
+      <a href="#favourites"class="btn btn--white btn--small">
+        Discover your new MustRead
+      </a>
+    </div>
   </div>
 
-  <div class="category__title-section">
-    <h1 class="category__title">
-      Most Popular
-    </h1>
-  </div>
 
-  <section class="container-fluid">
+
+  <section class="container-fluid" id="favourites">
+    <h2>Favourites</h2>
     <div class="row">
       {% for book in books %}
         <div class="col-xs-12 col-sm-6 col-md-4">
@@ -53,27 +55,46 @@
           {% include 'molecules/card.twig' %}
         </div>
       {% endfor %}
-    </div>
-  </section>
-
-
-  <section class="categoryList-section" id="categories">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2>Categories</h2>
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
         </div>
-      </div>
-      <div class="row">
-        {% for category in categories %}
-          {% if category.name != "Uncategorized" %}
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <a href="{{ category.link }}" class="categoryList__link">
-                {{ category.name }}
-              </a>
-            </div>
-          {% endif %}
-        {% endfor %}
+      {% endfor %}
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
+        </div>
+      {% endfor %}
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
+        </div>
+      {% endfor %}
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
+        </div>
+      {% endfor %}
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
+        </div>
+      {% endfor %}
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
+        </div>
+      {% endfor %}
+      {% for book in books %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          {% include 'molecules/card.twig' %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        {% include 'organisms/pagination.twig' %}
       </div>
     </div>
   </section>
